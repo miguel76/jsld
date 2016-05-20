@@ -1,0 +1,29 @@
+{
+  "name": "jsonld-graph",
+  "version": "0.1.0",
+  "description": "Javascript graph representation of JSON-LD graphs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguel76/jsonld-graph.git"
+  },
+  "keywords": [
+    "JSON-LD",
+    "RDF",
+    "graph"
+  ],
+  "author": "Miguel Ceriani <miguel.ceriani@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miguel76/jsonld-graph/issues"
+  },
+  "homepage": "https://github.com/miguel76/jsonld-graph#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "jsonld": "^0.4.11",
+    "lodash": "^4.12.0"
+  }
+}
