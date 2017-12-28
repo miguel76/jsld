@@ -57,7 +57,7 @@ graph.makeGraph(inputJson, contextJson, null, function(err, result) {
   if (err) {
     console.log(err);
   } else if (result) {
-    // console.log(result);
+    console.log(result);
     // console.log(result['ex-library:the-republic']);
     // depthFirst(result['ex-library:the-republic']);
   }
