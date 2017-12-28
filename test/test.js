@@ -1,8 +1,13 @@
 var fs = require('fs'),
+    jsonld = require('jsonld'),
     graph = require('../index');
 
 var inputStr = fs.readFileSync(__dirname + '/library.jsonld');
 var inputJson = JSON.parse(inputStr);
+var contextStr = fs.readFileSync(__dirname + '/library.context.jsonld');
+var contextJson = JSON.parse(contextStr);
+
+console.log(JSON.stringify(inputJson));
 
 var show = function(node) {
   if (node['@id']) return { '@id': node['@id'] };
@@ -38,11 +43,22 @@ var depthFirst = graph.commonVisits.depthFirst({
   }
 });
 
+// jsonld.objectify(inputJson, contextJson, null,  function(err, result) {
+//   if (err) {
+//     console.log(err);
+//   } else if (result) {
+//     console.log(result);
+//     console.log(result['http://example.org/library/the-republic']);
+//     depthFirst(result['http://example.org/library/the-republic']);
+//   }
+// });
 
-graph.makeGraph(inputJson, null, function(err, result) {
+graph.makeGraph(inputJson, contextJson, null, function(err, result) {
   if (err) {
     console.log(err);
   } else if (result) {
-    depthFirst(result['http://example.org/library/the-republic']);
+    // console.log(result);
+    // console.log(result['ex-library:the-republic']);
+    // depthFirst(result['ex-library:the-republic']);
   }
 });
