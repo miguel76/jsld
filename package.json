@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miguel76/jsonld-graph.git"
+    "url": "git+https://github.com/miguel76/jsld.git"
   },
   "keywords": [
     "JSON-LD",
@@ -18,9 +18,9 @@
   "author": "Miguel Ceriani <miguel.ceriani@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/miguel76/jsonld-graph/issues"
+    "url": "https://github.com/miguel76/jsld/issues"
   },
-  "homepage": "https://github.com/miguel76/jsonld-graph#readme",
+  "homepage": "https://github.com/miguel76/jsld#readme",
   "devDependencies": {},
   "dependencies": {
     "async": "^2.6.0",
