@@ -1,4 +1,4 @@
-# jsonld-graph
+# jsld
 
 Library to create and visit a JS object representation of JSON-LD graphs,
 that we call JS-LD.

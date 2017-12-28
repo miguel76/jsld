@@ -1,7 +1,7 @@
 {
-  "name": "jsonld-graph",
+  "name": "jsld",
   "version": "0.1.0",
-  "description": "Javascript graph representation of JSON-LD graphs",
+  "description": "Javascript linked representation of JSON-LD graphs",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js"
