@@ -4,7 +4,7 @@ jsld
 Introduction
 ------------
 
-Library to create and visit a JS object representation of [JSON-LD][http://json-ld.org] graphs,
+Library to create and visit a JS object representation of [JSON-LD](http://json-ld.org) graphs,
 that we call JS-LD.
 JS-LD objects respect JSON-LD syntax but all the links between resources are
 represented as actual links (they are actual JS graphs, while JSON-LD is always
