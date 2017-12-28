@@ -53,7 +53,7 @@ var depthFirst = jsld.commonVisits.depthFirst({
 //   }
 // });
 
-jsld.convert(inputJson, contextJson, null, function(err, result) {
+jsld.convert(inputJson, contextJson, function(err, result) {
   if (err) {
     console.log(err);
   } else if (result) {
