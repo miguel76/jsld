@@ -1,9 +1,9 @@
-var makeGraph = require('./lib/graph'),
-    makeVisit = require('./lib/visit'),
+var convert = require('./lib/convert'),
+    wrapVisit = require('./lib/wrapVisit'),
     commonVisits = require('./lib/commonVisits');
 
 module.exports = {
-  makeGraph: makeGraph,
-  makeVisit: makeVisit,
+  convert: convert,
+  wrapVisit: wrapVisit,
   commonVisits: commonVisits
 };

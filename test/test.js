@@ -1,6 +1,6 @@
 var fs = require('fs'),
     jsonld = require('jsonld'),
-    graph = require('../index');
+    jsld = require('../index');
 
 var inputStr = fs.readFileSync(__dirname + '/library.jsonld');
 var inputJson = JSON.parse(inputStr);
@@ -17,7 +17,7 @@ var show = function(node) {
 
 var depth = 0;
 
-var depthFirst = graph.commonVisits.depthFirst({
+var depthFirst = jsld.commonVisits.depthFirst({
   preAction: function(node, parentInVisit) {
     depth++;
     if (depth > 5) throw 'Too much';
@@ -53,7 +53,7 @@ var depthFirst = graph.commonVisits.depthFirst({
 //   }
 // });
 
-graph.makeGraph(inputJson, contextJson, null, function(err, result) {
+jsld.convert(inputJson, contextJson, null, function(err, result) {
   if (err) {
     console.log(err);
   } else if (result) {
