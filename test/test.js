@@ -2,9 +2,9 @@ var fs = require('fs'),
     jsonld = require('jsonld'),
     jsld = require('../index');
 
-var inputStr = fs.readFileSync(__dirname + '/library.jsonld');
+var inputStr = fs.readFileSync(__dirname + '/aco.jsonld');
 var inputJson = JSON.parse(inputStr);
-var contextStr = fs.readFileSync(__dirname + '/library.context.jsonld');
+var contextStr = fs.readFileSync(__dirname + '/aco.context.jsonld');
 var contextJson = JSON.parse(contextStr);
 
 console.log(JSON.stringify(inputJson));

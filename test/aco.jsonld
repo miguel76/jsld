@@ -1,0 +1,229 @@
+{
+   "@context": {
+      "@base": "http://audiocommons.org/ns/audiocommons",
+      "ac": "http://audiocommons.org/ns/audiocommons#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "id": "@id",
+      "type": "@type",
+      "subClassOf": {
+         "@id": "owl:subClassOf",
+         "@type": "@id"
+      },
+      "superClassOf": {
+         "@reverse": "owl:subClassOf",
+         "@type": "@id"
+      },
+      "subPropertyOf": {
+         "@id": "owl:subPropertyOf",
+         "@type": "@id"
+      },
+      "superPropertyOf": {
+         "@reverse": "owl:subPropertyOf",
+         "@type": "@id"
+      },
+      "domain": {
+         "@id": "rdfs:domain",
+         "@type": "@id"
+      },
+      "domainOf": {
+         "@reverse": "rdfs:domain",
+         "@type": "@id"
+      },
+      "range": {
+         "@id": "rdfs:range",
+         "@type": "@id"
+      },
+      "rangeOf": {
+         "@reverse": "rdfs:range",
+         "@type": "@id"
+      },
+      "versionInfo": "owl:versionInfo",
+      "maker": "foaf:maker",
+      "name": "foaf:name",
+      "defines": {
+         "@reverse": "rdfs:isDefinedBy",
+         "@type": "@id"
+      },
+      "label": "rdfs:label",
+      "comment": "rdfs:comment",
+      "descr": "dcterms:description",
+      "title": "dcterms:title",
+      "created": "dcterms:created",
+      "date": "dcterms:date"
+   },
+   "@graph": [
+      {
+         "id": "_:bn1",
+         "name": "George Fazekas"
+      },
+      {
+         "id": "_:bn2",
+         "name": "Miguel Ceriani"
+      },
+      {
+         "id": "audiocommons",
+         "type": [
+            "rdfs:Resource",
+            "owl:Ontology"
+         ],
+         "created": "2017/07/27 11:09:00",
+         "date": "2017/07/27 11:09:00",
+         "descr": "The Audio Commons Ontology provides main concepts and properties for describing audio content, both musical and non-musical, on the Semantic Web.\n",
+         "title": "The Audio Commons Ontology",
+         "versionInfo": "Revision: 0.0.0",
+         "maker": [
+            {
+               "id": "_:bn1"
+            },
+            {
+               "id": "_:bn2"
+            }
+         ]
+      },
+      {
+         "id": "ac:AudioCategory",
+         "type": "rdfs:Resource",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Audio category",
+         "subClassOf": "frbr:Concept"
+      },
+      {
+         "id": "ac:AudioClip",
+         "type": "rdfs:Resource",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Audio clip",
+         "subClassOf": "ac:AudioManifestation"
+      },
+      {
+         "id": "ac:AudioCollection",
+         "type": "rdfs:Resource",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Audio collection",
+         "subClassOf": "ac:AudioManifestation"
+      },
+      {
+         "id": "ac:AudioCollectionNode",
+         "type": [
+            "rdfs:Class",
+            "rdfs:Resource"
+         ],
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Audio collection node"
+      },
+      {
+         "id": "ac:AudioExpression",
+         "type": "rdfs:Resource",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Audio expression",
+         "subClassOf": "frbr:Expression"
+      },
+      {
+         "id": "ac:AudioFile",
+         "type": "rdfs:Resource",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Audio file",
+         "subClassOf": [
+            "ebu:MediaResource",
+            "ac:AudioItem"
+         ]
+      },
+      {
+         "id": "ac:AudioItem",
+         "type": "rdfs:Resource",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Audio item",
+         "subClassOf": "frbr:Item"
+      },
+      {
+         "id": "ac:AudioManifestation",
+         "type": [
+            "rdfs:Class",
+            "rdfs:Resource"
+         ],
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Audio manifestation",
+         "subClassOf": [
+            "cc:Work",
+            "frbr:Manifestation"
+         ]
+      },
+      {
+         "id": "ac:DigitalSignal",
+         "type": "rdfs:Resource",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Digital signal",
+         "subClassOf": "ac:AudioExpression"
+      },
+      {
+         "id": "ac:Sound",
+         "type": "rdfs:Resource",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "label": "Physical sound",
+         "subClassOf": "ac:AudioExpression"
+      },
+      {
+         "id": "ac:nodeContent",
+         "type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+            "rdfs:Resource"
+         ],
+         "domain": "ac:AudioCollectionNode",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "range": "ac:AudioManifestation"
+      },
+      {
+         "id": "ac:nodeIndex",
+         "type": [
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+            "rdfs:Resource"
+         ],
+         "domain": "ac:AudioCollectionNode",
+         "rdfs:isDefinedBy": {
+            "id": "audiocommons"
+         },
+         "range": "ac:AudioManifestation"
+      },
+      {
+         "id": "rdfs:Resource",
+         "type": [
+            "rdfs:Class",
+            "rdfs:Resource"
+         ]
+      },
+      {
+         "id": "owl:Ontology",
+         "type": [
+            "rdfs:Class",
+            "rdfs:Resource"
+         ]
+      }
+   ]
+}
