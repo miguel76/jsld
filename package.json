@@ -1,6 +1,6 @@
 {
   "name": "jsld",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Javascript linked representation of JSON-LD graphs",
   "main": "index.js",
   "scripts": {
