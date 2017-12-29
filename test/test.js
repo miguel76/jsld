@@ -7,7 +7,7 @@ var inputJson = JSON.parse(inputStr);
 var contextStr = fs.readFileSync(__dirname + '/aco.context.jsonld');
 var contextJson = JSON.parse(contextStr);
 
-console.log(JSON.stringify(inputJson));
+// console.log(JSON.stringify(inputJson));
 
 var show = function(node) {
   if (node['@id']) return { '@id': node['@id'] };
