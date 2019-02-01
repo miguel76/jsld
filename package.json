@@ -23,8 +23,8 @@
   "homepage": "https://github.com/miguel76/jsld#readme",
   "devDependencies": {},
   "dependencies": {
-    "async": "^2.6.0",
+    "async": "^2.6.1",
     "jsonld": "^0.4.12",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.11"
   }
 }
